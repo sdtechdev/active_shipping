@@ -875,8 +875,8 @@ module ActiveShipping
 
         # Get scheduled delivery date
         unless status == :delivered
-          scheduled_delivery_date_node = first_shipment.at('ScheduledDeliveryDate')
-          scheduled_delivery_date_node ||= first_shipment.at('RescheduledDeliveryDate')
+          scheduled_delivery_date_node = first_shipment.at('RescheduledDeliveryDate')
+          scheduled_delivery_date_node ||= first_shipment.at('ScheduledDeliveryDate')
 
           if scheduled_delivery_date_node
             scheduled_delivery_date = parse_ups_datetime(
