@@ -2,7 +2,7 @@ require 'bundler/setup'
 
 require 'minitest/autorun'
 require "minitest/reporters"
-require 'mocha/mini_test'
+require 'mocha/minitest'
 require 'timecop'
 require 'business_time'
 
@@ -12,6 +12,8 @@ require 'erb'
 require 'pry'
 require 'vcr'
 require 'webmock/minitest'
+
+require_relative 'helpers/holiday_helpers.rb'
 
 Minitest::Reporters.use! Minitest::Reporters::ProgressReporter.new(detailed_skip: !!ENV["CI"])
 
