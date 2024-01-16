@@ -8,8 +8,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ '2.2', '2.3', '2.4' ]
-        rails: [ '5.0', '5.1', '5.2' ]
+        ruby: [ '2.7' ]
+        rails: [ '5.2' ]
     env:
       BUNDLE_GEMFILE: gemfiles/rails-${{ matrix.rails }}.gemfile
     steps:
